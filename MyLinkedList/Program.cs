@@ -247,15 +247,7 @@ namespace MyLinkedList
         }
         public bool Remove(T value) //Удаляет первое вхождение заданного значения из MyLinkedList<T>
         {
-            MyLinkedListNode<T> current = head;
-            while (current != null)
-            {
-                if (current.Value.Equals(value))
-                {
-                    break;
-                }
-                current = current.Next;
-            }
+            MyLinkedListNode<T> current = this.Find(value);
             if (current != null)
             {
                 if (current.Previous != null)
